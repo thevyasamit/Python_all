@@ -12,7 +12,7 @@ lis1 = [1,2,3]
 lis1.append(4)
 print(lis1,'\n')
 
-#here extend will add the elements(similar or distinct) of the list whiich is passed in extend() function and make a single list.
+#here extend will add the elements(similar or distinct) of the list which is passed in extend() function and make a single list.
 lis2 = [1,2,3]
 lis2.extend([2,3,4,2,5])
 print(lis2,'\n')
