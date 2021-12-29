@@ -106,22 +106,57 @@ OOP concepts are:   1. Inheritance  (i.e. child inheriting parent class)
 
 #  inheritance example in python. University is parent class and Eng is child classs extending University. 
 
-class University:
-    def __init__(self, name, location):
-        self.uname = name
-        self.ulocation = location
+# class University:
+#     def __init__(self, name, location):
+#         self.uname = name
+#         self.ulocation = location
     
-    def uniInfo(self):
-        return f"University is : {self.uname} and location is {self.ulocation} \n"
+#     def uniInfo(self):
+#         return f"University is : {self.uname} and location is {self.ulocation} \n"
     
-class Eng(University):
-    def __init__(self, name, location, cname):
-        super().__init__(name, location)
-        #
-        self.cname = cname
-        #we can also do University.__init__(self,name, location)
-    def colInfo(self):
-        return f"\nCollege is {self.cname} and university is {self.uname} and their location is {self.ulocation}\n"
+# class Eng(University):
+#     def __init__(self, name, location, cname):
+#         super().__init__(name, location)
+#         #
+#         self.cname = cname
+#         #we can also do University.__init__(self,name, location)
+#     def colInfo(self):
+#         return f"\nCollege is {self.cname} and university is {self.uname} and their location is {self.ulocation}\n"
 
-obj1 = Eng('CSU', 'Cleveland', 'Washkiwiz')
-print(obj1.colInfo())
+# obj1 = Eng('Harvard', 'Boston', 'HBS')
+# print(obj1.colInfo())
+
+
+# example to understand class variable and use them
+# self is an instance variable and whenever an instacne is created self is there and if the class variable valus is not there
+# then self comes into picture and creates value. It can be confuing when used with other class variables whihc need to be updated for
+# all the instance for example in this we see this case with empcount. on using self.empcount+=1, the result will show only 1
+# empplye in both o/p as it is updated on theor individual creation (objet creation) whereas emp.empcount+=1 will update it whenever
+# instance is created that is why in 1st object creation o/p will be one and after 2nd object creation the o/p will be 2 of empcount
+
+class emp:
+
+    payRaise = float(1.05) # 5% increase
+    empcount = 0
+    def __init__(self, first, last, pay):
+        self.fname = first
+        self.lname = last
+        self.pay = float (pay)
+        emp.empcount+=1
+
+    def retall(self):
+        self.pay =float(self.payRaise * self.pay)
+        return self.fname,self.lname,self.pay,self.empcount
+    
+class developer(emp): #here developer inherits all the methods and variables of emp
+    pass
+
+class manager(emp):
+    pass
+emp1 = emp('A','V','123000')
+print(emp1.retall())
+
+emp2 = emp('a','v','3266')
+print(emp2.retall())
+
+
