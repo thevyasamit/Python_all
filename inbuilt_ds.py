@@ -77,4 +77,25 @@ print(5 // 2) #It will give the floor
 
 -----Tuples-------
 
+Tuples in python are immutable i.e. we cannot append do delete elements from it. Set is also a tuple in python.
+In order to add an element or delete we need to create a new tuple.
+
 '''
+#declaring a tuple
+
+tup = ('A','X','K')
+print(tup) #print the compelete tuple/
+for i in tup:
+    print(i)
+print(tup[0])
+tup[0] = 'B' # will give error as mentioned earlier that tuples are immutable
+
+'''
+-----------SETS------------
+
+We mainly use set to have unique elements in it. 
+'''
+
+st = set([1,1,2,2,3,2,2,4,45,3,4,3])
+print(st) #output will be {1, 2, 3, 4, 45} all unique elements
+# we can use sets to do the mathematical sets operation like union, internsection, etc.

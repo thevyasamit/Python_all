@@ -38,7 +38,7 @@ summing(1,2,3,5) # output will be 11
 In this scenario the funciton summing() doesn't know the length of the parameter so we use packing in order to pack the variable 
 length paramenters.
 
-Anything declared inside __init__ (which is basically a constructor) comes under instance variable and the variables declar inside class will come under 
+Anything declared inside __init__ (which is basically a constructor) comes under instance variable and the variables declared inside class will come under 
 class variable i.e. accessed by all the class functions and members. 
 
 
