@@ -99,3 +99,14 @@ We mainly use set to have unique elements in it.
 st = set([1,1,2,2,3,2,2,4,45,3,4,3])
 print(st) #output will be {1, 2, 3, 4, 45} all unique elements
 # we can use sets to do the mathematical sets operation like union, internsection, etc.
+st.add(532)
+# this will add the it in the set since it is unique. If the element to be added is already in the set then it won't be added. 
+st.remove(1) # this will remove the element '1' from the set 
+st.clear() # this will clear the set.
+
+
+'''
+------------Dictionary---------
+
+'''
+
